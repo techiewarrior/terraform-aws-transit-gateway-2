@@ -176,32 +176,3 @@ resource "aws_nat_gateway" "gw-vpc-3-pub-sub-b" {
     scenario = var.scenario
   }
 }
-
-
-# # Route Tables Propagations
-# ## This section defines which VPCs will be routed from each Route Table created in the Transit Gateway
-
-# resource "aws_ec2_transit_gateway_route_table_propagation" "tgw-rt-dev-to-vpc-1" {
-#   transit_gateway_attachment_id  = aws_ec2_transit_gateway_vpc_attachment.tgw-att-vpc-1.id
-#   transit_gateway_route_table_id = aws_ec2_transit_gateway_route_table.tgw-dev-rt.id
-# }
-
-# resource "aws_ec2_transit_gateway_route_table_propagation" "tgw-rt-dev-to-vpc-2" {
-#   transit_gateway_attachment_id  = aws_ec2_transit_gateway_vpc_attachment.tgw-att-vpc-2.id
-#   transit_gateway_route_table_id = aws_ec2_transit_gateway_route_table.tgw-dev-rt.id
-# }
-
-# resource "aws_ec2_transit_gateway_route_table_propagation" "tgw-rt-dev-to-vpc-3" {
-#   transit_gateway_attachment_id  = aws_ec2_transit_gateway_vpc_attachment.tgw-att-vpc-3.id
-#   transit_gateway_route_table_id = aws_ec2_transit_gateway_route_table.tgw-dev-rt.id
-# }
-
-# resource "aws_ec2_transit_gateway_route_table_propagation" "tgw-rt-shared-to-vpc-1" {
-#   transit_gateway_attachment_id  = aws_ec2_transit_gateway_vpc_attachment.tgw-att-vpc-1.id
-#   transit_gateway_route_table_id = aws_ec2_transit_gateway_route_table.tgw-shared-rt.id
-# }
-
-# resource "aws_ec2_transit_gateway_route_table_propagation" "tgw-rt-shared-to-vpc-2" {
-#   transit_gateway_attachment_id  = aws_ec2_transit_gateway_vpc_attachment.tgw-att-vpc-2.id
-#   transit_gateway_route_table_id = aws_ec2_transit_gateway_route_table.tgw-shared-rt.id
-# }
